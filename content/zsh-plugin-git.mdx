@@ -1,0 +1,83 @@
+---
+title: "Zsh Plugin: Git"
+publishedAt: "2025-07-20"
+summary: "Core Oh My Zsh plugin providing 177+ aliases and functions for Git commands, significantly reducing keystrokes and improving productivity."
+---
+
+## Description
+
+Core Oh My Zsh plugin providing 177+ aliases and functions for Git commands, significantly reducing keystrokes and improving productivity.  
+[Catalin's Tech](https://catalins.tech/zsh-plugins/)
+
+## Essential Commands
+
+### Basic Operations
+
+- `ga` → `git add` 
+- `gaa` → `git add --all` 
+- `gapa` → `git add --patch`
+- `gau` → `git add --update`
+
+### Commit Operations
+
+- `gc` → `git commit -v`
+- `gc!` → `git commit -v --amend`
+- `gca` → `git commit -v -a`
+- `gcam` → `git commit -a -m`
+- `gcm` → `git commit -m`
+
+### Branch Operations
+
+- `gb` → `git branch`
+- `gba` → `git branch -a`
+- `gbd` → `git branch -d`
+- `gcb` → `git checkout -b` 
+- `gco` → `git checkout` 
+
+### Status and Diff
+
+- `gst` → `git status`
+- `gsb` → `git status -sb`
+- `gd` → `git diff`
+- `gdca` → `git diff --cached`
+
+## Advanced Commands
+
+### Push/Pull Operations
+
+- `gp` → `git push`
+- `gpf!` → `git push --force`
+- `gpsup` → `git push --set-upstream origin $(git_current_branch)`
+- `ggpush` → `git push origin "$(git_current_branch)"`
+
+### Log and History
+
+- `glg` → `git log --stat`
+- `glgg` → `git log --graph`
+- `glo` → `git log --oneline --decorate`
+- `glol` → `git log --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset'`
+
+### Stash Operations
+
+- `gsta` → `git stash push`
+- `gstaa` → `git stash apply`
+- `gstl` → `git stash list`
+- `gstp` → `git stash pop`
+
+## Usage Examples
+
+```bash
+# Quick commit workflow
+ga .
+gcam "Add new feature"
+ggpush
+
+# Branch management
+gcb feature/new-feature
+gco main
+gbd feature/old-feature
+
+# Log viewing
+glol                    # Pretty log with graph
+glo | head -10         # Last 10 commits oneline
+```

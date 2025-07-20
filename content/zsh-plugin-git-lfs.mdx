@@ -1,0 +1,63 @@
+---
+title: "Zsh Plugin: Git LFS"
+publishedAt: "2025-07-20"
+summary: "Provides convenient aliases for Git LFS (Large File Storage) commands to handle large files efficiently by storing pointers in Git while keeping file contents on remote servers."
+---
+
+## Description
+
+Provides convenient aliases for Git LFS (Large File Storage) commands to handle large files efficiently by storing pointers in Git while keeping file contents on remote servers.  
+[Git LFS](https://git-lfs.com/)
+
+## Essential Commands
+
+### Installation & Setup
+
+- `glfv` → `git lfs version`
+- `glfi` → `git lfs install`
+- `glfui` → `git lfs uninstall`
+
+### File Operations
+
+- `glff` → `git lfs fetch`
+- `glffa` → `git lfs fetch --all`
+- `glfl` → `git lfs pull`
+- `glfp` → `git lfs push`
+- `glfst` → `git lfs status`
+
+### File Listing
+
+- `glfls` → `git lfs ls-files`
+- `glflsa` → `git lfs ls-files --all`
+- `glflsl` → `git lfs ls-files --long`
+
+## Advanced Commands
+
+### File Locking
+
+- `glflk` → `git lfs lock`
+- `glflks` → `git lfs locks`
+- `glfulk` → `git lfs unlock`
+
+### Environment and Pointers
+
+- `glfev` → `git lfs env`
+- `glfpo` → `git lfs pointer`
+- `glfsm` → `git lfs smudge`
+
+## Usage Examples
+
+```bash
+# Track large files
+git lfs track "*.psd"
+git lfs track "*.zip"
+
+# Lock files for editing
+glflk images/logo.psd
+
+# Check LFS status
+glfst
+
+# Pull LFS files
+glfl
+```

@@ -1,0 +1,48 @@
+---
+title: "Zsh Plugin: Yarn"
+publishedAt: "2025-07-20"
+summary: "Comprehensive aliases for Yarn package manager commands with automatic PATH configuration for global packages."
+---
+
+## Description
+
+Comprehensive aliases for Yarn package manager commands with automatic PATH configuration for global packages.  
+[GitHub](https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/yarn/README.md)
+
+## Essential Commands
+
+- `y` → `yarn` - Basic yarn command
+- `ya` → `yarn add` - Add dependencies
+- `yad` → `yarn add --dev` - Add dev dependencies
+- `yin` → `yarn install` - Install dependencies
+- `yrun` → `yarn run` - Run scripts
+- `yst` → `yarn start` - Start application
+- `yt` → `yarn test` - Run tests
+
+## Advanced Commands
+
+- `yap` → `yarn add --peer` - Add peer dependencies
+- `yb` → `yarn build` - Build project
+- `ycc` → `yarn cache clean` - Clean yarn cache
+- `ylnf` → `yarn lint --fix` - Fix linting issues
+- `yui` → `yarn upgrade-interactive` - Interactive upgrade
+- `yw` → `yarn workspace` - Run workspace commands
+
+## Usage Examples
+
+```bash
+# Package management
+ya react redux       # Add multiple packages
+yad jest             # Add dev dependency
+yrm lodash           # Remove package
+
+# Development workflow
+yin                  # Install dependencies
+yst                  # Start dev server
+yt                   # Run tests
+yb                   # Build for production
+
+# Maintenance
+yui                  # Interactive updates
+ycc                  # Clean cache
+```

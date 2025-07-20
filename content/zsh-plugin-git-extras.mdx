@@ -1,0 +1,70 @@
+---
+title: "Zsh Plugin: Git Extras"
+publishedAt: "2025-07-20"
+summary: "Collection of 60+ Git utilities extending Git's functionality with repository analysis, workflow shortcuts, and additional commands."
+---
+
+## Description
+
+Collection of 60+ Git utilities extending Git's functionality with repository analysis, workflow shortcuts, and additional commands.  
+[Opensource.com](https://opensource.com/article/20/4/git-extras)
+
+## Essential Commands
+
+### Repository Information
+
+- `git summary` - Show repository statistics
+- `git effort [file]` - Show effort statistics per file
+- `git authors` - List repository authors with commit counts
+- `git contrib <author>` - Show author contributions
+- `git count` - Count commits by user
+
+### Branch Management
+
+- `git create-branch <name>` - Create and checkout new branch
+- `git delete-branch <name>` - Delete branch locally and remotely
+- `git delete-merged-branches` - Delete merged branches
+- `git fresh-branch <name>` - Create fresh branch from main
+
+### File Operations
+
+- `git ignore <pattern>` - Add to .gitignore
+- `git info` - Show repository information
+- `git changelog` - Generate changelog
+
+## Advanced Commands
+
+### Release Management
+
+- `git release <version>` - Tag and push a new release
+- `git feature <name>` - Start/finish feature branch
+- `git bug <name>` - Create bug fix branch
+
+### Analysis and Debugging
+
+- `git delta <commit>` - Show files that differ from another commit
+- `git local-commits` - Show unpushed commits
+- `git effort --above 15` - Show files with 15+ commits
+
+### Pull Request Integration
+
+- `git pr <number>` - Checkout GitHub/GitLab pull request
+- `git pr clean` - Remove all PR branches
+
+## Usage Examples
+
+```bash
+# Repository analysis
+git summary --line
+git effort --above 10 src/
+
+# Release workflow
+git release v2.1.0
+
+# Pull request workflow
+git pr 123
+git pr clean
+
+# Branch cleanup
+git delete-merged-branches
+```

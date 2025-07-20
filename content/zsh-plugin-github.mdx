@@ -1,0 +1,64 @@
+---
+title: "Zsh Plugin: Github(gh)"
+publishedAt: "2025-07-20"
+summary: "Provides autocompletion for GitHub CLI commands for repository management, issues, and pull requests."
+---
+
+## Description
+
+Provides autocompletion for GitHub CLI commands for repository management, issues, and pull requests.  
+[GitHub](https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/gh/gh.plugin.zsh)
+
+## Essential Commands
+
+### Repository Operations
+
+- `gh repo create` - Create new repository
+- `gh repo clone` - Clone repository
+- `gh repo fork` - Fork repository
+- `gh repo list` - List repositories
+- `gh repo view` - View repository details
+
+### Issues and Pull Requests
+
+- `gh issue create` - Create issue
+- `gh issue list` - List issues
+- `gh issue view <number>` - View specific issue
+- `gh pr create` - Create pull request
+- `gh pr list` - List pull requests
+- `gh pr checkout <number>` - Checkout PR branch
+- `gh pr merge` - Merge pull request
+
+## Advanced Commands
+
+### Workflow Management
+
+- `gh workflow run <name>` - Trigger workflow
+- `gh workflow list` - List workflows
+- `gh run list` - List workflow runs
+- `gh run watch` - Watch workflow run
+
+### Advanced PR Operations
+
+- `gh pr create --draft` - Create draft PR
+- `gh pr ready` - Mark draft PR as ready
+- `gh pr review` - Review pull request
+- `gh pr merge --squash` - Squash merge pull request
+
+## Usage Examples
+
+```bash
+# Repository management
+gh repo create myproject --public
+gh repo clone user/repo
+
+# Pull request workflow
+gh pr create --title "New feature" --body "Description"
+gh pr checkout 42
+gh pr review --approve
+gh pr merge --squash
+
+# Issue management
+gh issue create --title "Bug report"
+gh issue list --state open
+```

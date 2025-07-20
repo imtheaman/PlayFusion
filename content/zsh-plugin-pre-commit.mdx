@@ -1,0 +1,57 @@
+---
+title: "Zsh Plugin: Git Pre-commit"
+publishedAt: "2025-07-20"
+summary: "Provides aliases for pre-commit hook management, enabling automated code quality checks before commits."
+---
+
+## Description
+
+Provides aliases for pre-commit hook management, enabling automated code quality checks before commits.
+
+## Essential Commands
+
+- `prc` → `pre-commit`
+- `prcr` → `pre-commit run`
+- `prcra` → `pre-commit run --all-files`
+- `prcrf` → `pre-commit run --files`
+- `prcau` → `pre-commit autoupdate`
+
+## Advanced Commands
+
+### Installation and Setup
+
+- `pre-commit install` - Install pre-commit hooks
+- `pre-commit install --hook-type commit-msg` - Install specific hook type
+- `pre-commit uninstall` - Uninstall hooks
+
+### Hook Management
+
+- `pre-commit run --hook-stage manual` - Run manual stage hooks
+- `pre-commit try-repo <repo>` - Try hooks from repository
+- `pre-commit clean` - Clean cached pre-commit files
+- `pre-commit gc` - Garbage collect cached repos
+
+## Usage Examples
+
+```bash
+# Setup
+pre-commit install
+
+# Run on all files
+prcra
+
+# Update hook versions
+prcau
+
+# Run on specific files
+prcrf file1.py file2.py
+
+# Configuration example (.pre-commit-config.yaml)
+repos:
+-   repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.4.0
+    hooks:
+    -   id: trailing-whitespace
+    -   id: end-of-file-fixer
+    -   id: check-yaml
+```

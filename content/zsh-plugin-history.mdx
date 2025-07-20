@@ -1,0 +1,43 @@
+---
+title: "Zsh Plugin: History"
+publishedAt: "2025-07-20"
+summary: "Enhanced history management providing convenient aliases and functions for searching, viewing, and managing command history."
+---
+
+## Description
+
+Enhanced history management providing convenient aliases and functions for searching, viewing, and managing command history.  
+[GitHub](https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/history/README.md)
+
+## Essential Commands
+
+- `h` - Display command history (alias for `history`)
+- `hl` - Display history with less pager
+- `hs [searchterm]` - Search history with grep (case-sensitive)
+- `hsi [searchterm]` - Search history with grep (case-insensitive)
+
+## Advanced Commands
+
+- **Up/Down arrows** - Navigate through history
+- **Ctrl+R** - Reverse history search
+- **Type command + Up** - Search for commands starting with typed text
+- `history -c` - Clear current session history
+- `history -d [line_number]` - Delete specific history line
+
+## Usage Examples
+
+```bash
+# Search command history
+hs docker            # Find all docker commands
+hsi GIT             # Case-insensitive search for git
+hl                  # Browse history with pager
+
+# Interactive workflows
+# Type "git push" + Up arrow → cycle through git push variations
+# Type "ssh" + Up → find recent SSH connections
+# Ctrl+R → interactive reverse search
+
+# History management
+history | grep password  # Find sensitive commands
+history -d 1234         # Delete specific line
+```

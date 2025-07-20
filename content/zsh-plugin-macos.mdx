@@ -1,0 +1,45 @@
+---
+title: "Zsh Plugin: macOS"
+publishedAt: "2025-07-20"
+summary: "macOS-specific utilities, shortcuts, and integrations for common system operations, Finder interactions, and system management."
+---
+
+## Description
+
+macOS-specific utilities, shortcuts, and integrations for common system operations, Finder interactions, and system management.  
+[GitHub](https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/macos/macos.plugin.zsh)
+
+## Essential Commands
+
+- `ofd [directory]` - Open directory in Finder (current if no arg)
+- `pfd` - Print path of frontmost Finder window
+- `cdf` - Change to directory selected in Finder
+- `showfiles` - Show hidden files in Finder
+- `hidefiles` - Hide hidden files in Finder
+
+## Advanced Commands
+
+- `rmdsstore` - Recursively remove .DS_Store files
+- `btrestart` - Restart Bluetooth daemon
+- `quick-look [file]` - Open file in Quick Look preview
+- `man-preview [command]` - Open man page in Preview app
+- `trash [files]` - Move files to Trash
+
+## Usage Examples
+
+```bash
+# Finder integration
+ofd                  # Open current directory in Finder
+cdf                  # Go to Finder's current directory
+pfd                  # Print Finder's current path
+
+# File management
+showfiles            # Show hidden files (.env, etc.)
+rmdsstore           # Clean up .DS_Store files
+trash old-file.txt  # Move to trash instead of rm
+
+# System utilities
+quick-look README.pdf
+man-preview git
+btrestart           # Fix Bluetooth issues
+```
