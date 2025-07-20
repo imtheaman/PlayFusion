@@ -168,6 +168,7 @@ export default function Page() {
                 <Link
                   href={DATA.contact.social.whatsapp.url}
                   className="text-blue-500 hover:underline"
+                  target="_blank"
                 >
                   Just shoot me a msg
                 </Link>
@@ -175,6 +176,7 @@ export default function Page() {
                 <Link
                   href={DATA.contact.social.email.url}
                   className="text-blue-500 hover:underline"
+                  target="_blank"
                 >
                   mail me directly
                 </Link>
