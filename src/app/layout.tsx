@@ -1,7 +1,6 @@
 import Navbar from "@/components/navbar";
 import { ThemeProvider } from "@/components/theme-provider";
 import { TooltipProvider } from "@/components/ui/tooltip";
-import { DATA } from "@/data/resume";
 import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
 import { Inter as FontSans } from "next/font/google";
@@ -13,17 +12,17 @@ const fontSans = FontSans({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(DATA.url),
+  metadataBase: new URL("https://playfusion.app"),
   title: {
-    default: DATA.name,
-    template: `%s | ${DATA.name}`,
+    default: "PlayFusion",
+    template: `%s | ${"PlayFusion"}`,
   },
-  description: DATA.description,
+  description: "PlayFusion Apps",
   openGraph: {
-    title: `${DATA.name}`,
-    description: DATA.description,
-    url: DATA.url,
-    siteName: `${DATA.name}`,
+    title: "PlayFusion",
+    description: "PlayFusion Apps",
+    url: "https://playfusion.app",
+    siteName: "PlayFusion Apps",
     locale: "en_US",
     type: "website",
   },
@@ -37,10 +36,6 @@ export const metadata: Metadata = {
       "max-image-preview": "large",
       "max-snippet": -1,
     },
-  },
-  twitter: {
-    title: `${DATA.name}`,
-    card: "summary_large_image",
   },
   verification: {
     google: "",
