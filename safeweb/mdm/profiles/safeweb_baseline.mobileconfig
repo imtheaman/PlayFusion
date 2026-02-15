@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PayloadContent</key>
+	<array>
+		<dict>
+			<key>DNSSettings</key>
+			<dict>
+				<key>DNSProtocol</key>
+				<string>https</string>
+				<key>ServerURL</key>
+				<string>https://dns.safeweb.example/dns-query</string>
+				<key>SupplementalMatchDomains</key>
+				<array>
+					<string>.</string>
+				</array>
+			</dict>
+			<key>PayloadDescription</key>
+			<string>Routes DNS queries through the SafeWeb resolver.</string>
+			<key>PayloadDisplayName</key>
+			<string>SafeWeb DNS Enforcement</string>
+			<key>PayloadIdentifier</key>
+			<string>com.safeweb.profile.baseline.dns</string>
+			<key>PayloadType</key>
+			<string>com.apple.dnsSettings.managed</string>
+			<key>PayloadUUID</key>
+			<string>439C0A5E-9F4C-4A9F-A27C-2830A3734F61</string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>PayloadDescription</key>
+			<string>Prevents end users from adding or editing VPN configurations.</string>
+			<key>PayloadDisplayName</key>
+			<string>SafeWeb Restrictions</string>
+			<key>PayloadIdentifier</key>
+			<string>com.safeweb.profile.baseline.restrictions</string>
+			<key>PayloadType</key>
+			<string>com.apple.applicationaccess</string>
+			<key>PayloadUUID</key>
+			<string>7896AF4A-4F5D-4D55-9E8F-1E925E5DA987</string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+			<key>allowVPNCreation</key>
+			<false/>
+		</dict>
+	</array>
+	<key>PayloadDescription</key>
+	<string>Baseline SafeWeb controls for supervised devices.</string>
+	<key>PayloadDisplayName</key>
+	<string>SafeWeb Baseline Controls</string>
+	<key>PayloadIdentifier</key>
+	<string>com.safeweb.profile.baseline</string>
+	<key>PayloadOrganization</key>
+	<string>SafeWeb</string>
+	<key>PayloadRemovalDisallowed</key>
+	<true/>
+	<key>PayloadType</key>
+	<string>Configuration</string>
+	<key>PayloadUUID</key>
+	<string>3A793969-0F63-48A0-8CE0-3DDDD6D89609</string>
+	<key>PayloadVersion</key>
+	<integer>1</integer>
+</dict>
+</plist>
